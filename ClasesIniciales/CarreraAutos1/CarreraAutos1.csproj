@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D3EDB904-934A-4E5D-A1F5-5DE569FFE143}</ProjectGuid>
+    <ProjectGuid>{692B4C3E-55E1-420D-8BDA-E29B70AF5B15}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ClasesIniciales</RootNamespace>
-    <AssemblyName>ClasesIniciales</AssemblyName>
+    <RootNamespace>CarreraAutos1</RootNamespace>
+    <AssemblyName>CarreraAutos1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Celular.cs" />
-    <Compile Include="Color.cs" />
-    <Compile Include="Mochila.cs" />
+    <Compile Include="AutoCarreras.cs" />
+    <Compile Include="Class2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

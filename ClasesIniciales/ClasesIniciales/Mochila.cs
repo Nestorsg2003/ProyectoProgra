@@ -6,16 +6,17 @@ namespace ClasesIniciales
     public class Mochila
     {
         //Dentro de este bloque para que pertenezca en la clase
+        //facilitar el acceso a esos atributos mas adelante =public
         //Int numeros enteros
-        int NumDeBolsas;
+       public  int NumDeBolsas;
         //evitar la ñ
-        string Tamanio;
+        public string Tamanio;
         //Decimales
-        float Precio;
+        public float Precio;
         //texto
-        string Disenio;
-        string Material;
-        int NumDeLlaveros;
-        Color color;
+        public string Disenio;
+        public string Material;
+        public int NumDeLlaveros;
+        public Color color;
     }
 }

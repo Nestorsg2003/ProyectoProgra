@@ -5,8 +5,9 @@ namespace ClasesIniciales
 {
     public class Color
     {
-        int Rojo;
-        int Verde;
-        int Azul;
+        public int Rojo;
+        public int Verde;
+        public int Azul;
     }
 }
+
