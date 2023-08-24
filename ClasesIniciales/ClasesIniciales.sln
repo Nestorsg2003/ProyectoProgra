@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClasesIniciales", "ClasesIn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarreraAutos2", "CarreraAutos2\CarreraAutos2.csproj", "{26BDBD1B-6BCD-407D-9145-840807E7E364}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musica", "Musica\Musica.csproj", "{5F74F862-113E-4893-87F2-CB8B106C5723}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{26BDBD1B-6BCD-407D-9145-840807E7E364}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26BDBD1B-6BCD-407D-9145-840807E7E364}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26BDBD1B-6BCD-407D-9145-840807E7E364}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F74F862-113E-4893-87F2-CB8B106C5723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F74F862-113E-4893-87F2-CB8B106C5723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F74F862-113E-4893-87F2-CB8B106C5723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F74F862-113E-4893-87F2-CB8B106C5723}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
