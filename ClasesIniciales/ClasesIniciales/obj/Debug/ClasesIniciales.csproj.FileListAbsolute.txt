@@ -1,0 +1,7 @@
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\ClasesIniciales\bin\Debug\ClasesIniciales.exe.config
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\ClasesIniciales\bin\Debug\ClasesIniciales.exe
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\ClasesIniciales\bin\Debug\ClasesIniciales.pdb
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\ClasesIniciales\obj\Debug\ClasesIniciales.csproj.AssemblyReference.cache
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\ClasesIniciales\obj\Debug\ClasesIniciales.csproj.CoreCompileInputs.cache
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\ClasesIniciales\obj\Debug\ClasesIniciales.exe
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\ClasesIniciales\obj\Debug\ClasesIniciales.pdb

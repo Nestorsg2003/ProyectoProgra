@@ -1,0 +1,7 @@
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\CarreraAutos2\bin\Debug\CarreraAutos2.exe.config
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\CarreraAutos2\bin\Debug\CarreraAutos2.exe
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\CarreraAutos2\bin\Debug\CarreraAutos2.pdb
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\CarreraAutos2\obj\Debug\CarreraAutos2.csproj.AssemblyReference.cache
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\CarreraAutos2\obj\Debug\CarreraAutos2.csproj.CoreCompileInputs.cache
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\CarreraAutos2\obj\Debug\CarreraAutos2.exe
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\CarreraAutos2\obj\Debug\CarreraAutos2.pdb
