@@ -71,6 +71,44 @@ namespace ClasesIniciales
             celularNestor.DisplayResHigh = 1080;
             celularNestor.DisplayResWidth = 1920;
             celularNestor.DisplayProt = "Corning Gorilla Glass 5";
-        }
+            celularNestor.PlatformOS = "Android 11";
+            celularNestor.PlatformChip = "Qualcomm SM7125 Snapdragon 720G";
+            celularNestor.PlatformCPU = "Octa-core";
+            celularNestor.PlatformGPU = "Adreno 618";
+            celularNestor.MemoryCard = "microSDXC";
+            celularNestor.MemoryInternal = 128;
+            celularNestor.MemoryRAM = 4;
+            celularNestor.MainCamQuad = "64 MP, f/1.8, 26mm (wide), " +
+                "12 MP, f / 2.2, 123˚ (ultrawide), 1.12µm 5 MP, f / 2.4, (macro) " +
+                "5 MP, f / 2.4, (depth)";
+            celularNestor.MainCamFeatures = "LED flash, panorama, HDR";
+            celularNestor.MainCamVideo = "4K 30fps, 1080 30/60fps";
+            celularNestor.SelfCamSingle = "32 MP, f/2.2, 26mm (wide)";
+            celularNestor.SelFCamFeatures = "HDR";
+            celularNestor.SelfCamVideo = "4K 30fps, 1080p 30fps";
+            celularNestor.SoundSpeaker = true;
+            celularNestor.SoundJack = true;
+            celularNestor.CommsWLAN = "Wifi 802.11 a/b/g/n/ac, dual band, Wifi Direct";
+            celularNestor.CommsBt = "5.0, A2DP, LE";
+            celularNestor.CommsPos = "GPS, GLONASS, GALILEO, BDS";
+            celularNestor.CommsNFC = true;
+            celularNestor.CommsRadio = "FM radio";
+            celularNestor.CommsUSB = "USB Type-C 2.0, OTG";
+            celularNestor.FeaturesSen = "Fingerprint, accelerometer, gyro, compass, Virtual proximity sensing";
+            celularNestor.BatteryType = "Li-Po 4500 mAh, non-removable";
+            celularNestor.BaterryCharge = "25W wired, 50% in 30min";
+            celularNestor.Misccolor = "Awesome Blue";
+            celularNestor.MiscModels = "SM-A525F";
+            celularNestor.MiscSAREUHead = 0.35f;
+            celularNestor.MiscSAREUBody = 0.84f;
+            celularNestor.MiscPrice = 400;
+            celularNestor.TestsPerf = "AnTuTu: 261282 (v8) " +
+                "GeekBench: 5865(v4.4), 1577(v5.1) " +
+                "GFXBench: 15fps(ES 3.1 onscreen)";
+            celularNestor.TestsDis = "Contrast ratio: Infinite (nominal)";
+            celularNestor.TestsCam = "Photo/Video";
+            celularNestor.TestsLoudspeaker = "-27.0 LUFS";
+            celularNestor.TestsEndurance = "Endurance rating 105h";
+    }
     }
 }

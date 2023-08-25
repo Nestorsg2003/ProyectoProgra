@@ -8,10 +8,10 @@ namespace Musica
 {
     class Album
     {
-        public string nombredelalbum;
-        public int anodepulicacion;
-        public string generosdelalbum;
-        public float duraciondelalbum;
-        public string diseñodelacaratuladelalbum;
+        public string nombrealbum;
+        public int pulicacion;
+        public string generosalbum;
+        public float duracionalbum;
+        public string diseñoalbum;
     }
 }

@@ -8,10 +8,10 @@ namespace Musica
 {
     class Artista
     {
-        public string nombredelartista;
+        public string nombreartista;
         public string miembros;
-        public string generosdelartista;
+        public string generosartista;
         public string albums;
-        public int periododeactividad;
+        public int periodoactividad;
     }
 }

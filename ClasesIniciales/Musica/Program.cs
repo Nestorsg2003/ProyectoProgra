@@ -11,20 +11,20 @@ namespace Musica
         static void Main(string[] args)
         {
             Artista TwentyOnePilots = new Artista();
-            TwentyOnePilots.nombredelartista = "Twenty One Pilots";
+            TwentyOnePilots.nombreartista = "Twenty One Pilots";
             TwentyOnePilots.miembros = "Josh Dun" +
                 "Chris Salih";
-            TwentyOnePilots.generosdelartista = "Indie pop, hip hop " +
+            TwentyOnePilots.generosartista = "Indie pop, hip hop " +
                 "electropo, pop rap, rock, rap rock";
             TwentyOnePilots.albums = "Twenty One Pilots, Regional at Best, Vessel, Blurryface, Trench, Scaled and Icy ";
-            TwentyOnePilots.periododeactividad = 2009 - 2023;
+            TwentyOnePilots.periodoactividad = 2009 - 2023;
 
             Album Vessel = new Album();
-            Vessel.nombredelalbum = "Vessel";
-            Vessel.anodepulicacion = 2013;
-            Vessel.generosdelalbum = "Indie pop, electropop, pop rap";
-            Vessel.duraciondelalbum = 47.44f;
-            Vessel.diseñodelacaratuladelalbum = "Dos viejitos parados";
+            Vessel.nombrealbum = "Vessel";
+            Vessel.pulicacion = 2013;
+            Vessel.generosalbum = "Indie pop, electropop, pop rap";
+            Vessel.duracionalbum = 47.44f;
+            Vessel.diseñoalbum = "Dos viejitos parados";
 
             Cancion HouseGold = new Cancion();
             HouseGold.nombre = "House of Gold";
@@ -35,18 +35,18 @@ namespace Musica
 
 
             Artista BrunoMars = new Artista();
-            BrunoMars.nombredelartista = "Bruno Mars";
+            BrunoMars.nombreartista = "Bruno Mars";
             BrunoMars.miembros = "Bruno Mars";
-            BrunoMars.generosdelartista = "pop, soul, reggae, hip hop, rock";
+            BrunoMars.generosartista = "pop, soul, reggae, hip hop, rock";
             BrunoMars.albums = "Doo-Wops, Unorthodox, 24 Magic";
-            BrunoMars.periododeactividad = 1992 - 2023;
+            BrunoMars.periodoactividad = 1992 - 2023;
 
             Album Magic = new Album();
-            Magic.nombredelalbum = "24KMagic";
-            Magic.anodepulicacion = 2003;
-            Magic.generosdelalbum = "Pop, funK, R&B, soul";
-            Magic.duraciondelalbum = 48.10f;
-            Magic.diseñodelacaratuladelalbum = "Chico sentado en silla";
+            Magic.nombrealbum = "24KMagic";
+            Magic.pulicacion = 2003;
+            Magic.generosalbum = "Pop, funK, R&B, soul";
+            Magic.duracionalbum = 48.10f;
+            Magic.diseñoalbum = "Chico sentado en silla";
 
             Cancion KMagic = new Cancion();
             KMagic.nombre = "24K Magic";
@@ -57,18 +57,18 @@ namespace Musica
 
 
             Artista LuisMiguel = new Artista();
-            LuisMiguel.nombredelartista = "Luis Miguel";
+            LuisMiguel.nombreartista = "Luis Miguel";
             LuisMiguel.miembros = "Luis Miguel";
-            LuisMiguel.generosdelartista = "pop, bolero, mariachi";
+            LuisMiguel.generosartista = "pop, bolero, mariachi";
             LuisMiguel.albums = "Un Sol, Amarte es un place, No culpes a la noche";
-            LuisMiguel.periododeactividad = 1980 - 2023;
+            LuisMiguel.periodoactividad = 1980 - 2023;
 
             Album EMI = new Album();
-            EMI.nombredelalbum = "No culpes a la noche";
-            EMI.anodepulicacion = 2009;
-            EMI.generosdelalbum = "pop latino";
-            EMI.duraciondelalbum = 53.07f;
-            EMI.diseñodelacaratuladelalbum = "Car en azules";
+            EMI.nombrealbum = "No culpes a la noche";
+            EMI.pulicacion = 2009;
+            EMI.generosalbum = "pop latino";
+            EMI.duracionalbum = 53.07f;
+            EMI.diseñoalbum = "Car en azules";
 
             Cancion Amas = new Cancion();
             Amas.nombre = "Sera que no me amas";
