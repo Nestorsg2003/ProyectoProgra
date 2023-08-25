@@ -37,9 +37,9 @@ namespace Musica
             Artista BrunoMars = new Artista();
             BrunoMars.nombredelartista = "Bruno Mars";
             BrunoMars.miembros = "Bruno Mars";
-            Asian.generosdelartista = "pop, soul, reggae, hip hop, rock";
-            Asian.albums = "Doo-Wops, Unorthodox, 24 Magic";
-            Asian.periododeactividad = 1992 - 2023;
+            BrunoMars.generosdelartista = "pop, soul, reggae, hip hop, rock";
+            BrunoMars.albums = "Doo-Wops, Unorthodox, 24 Magic";
+            BrunoMars.periododeactividad = 1992 - 2023;
 
             Album Magic = new Album();
             Magic.nombredelalbum = "24KMagic";
