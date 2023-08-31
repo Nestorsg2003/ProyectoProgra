@@ -17,7 +17,7 @@ public class ControladorJugador : MonoBehaviour
         {
             print("se presiono salto");
             MiCuerpo.AddForce(
-                new Vector3(0, 20, 0),
+                new Vector3(0, 10, 0),
                 ForceMode2D.Impulse);
         }
     }
