@@ -1,0 +1,7 @@
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\ArreglosSemana\bin\Debug\ArreglosSemana.exe.config
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\ArreglosSemana\bin\Debug\ArreglosSemana.exe
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\ArreglosSemana\bin\Debug\ArreglosSemana.pdb
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\ArreglosSemana\obj\Debug\ArreglosSemana.csproj.AssemblyReference.cache
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\ArreglosSemana\obj\Debug\ArreglosSemana.csproj.CoreCompileInputs.cache
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\ArreglosSemana\obj\Debug\ArreglosSemana.exe
+C:\Users\nestor.sanchezgo\Documents\GitHub\ProyectoProgra\ClasesIniciales\ArreglosSemana\obj\Debug\ArreglosSemana.pdb
