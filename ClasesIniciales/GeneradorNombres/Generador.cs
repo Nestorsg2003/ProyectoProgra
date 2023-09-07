@@ -10,8 +10,8 @@ namespace GeneradorNombres
     {
         public string[] titulos = { "Increible", "Brillante", "Asombroso", "Increible", "Inteligente" };
         public string[] raza = { "Alienigena", "Mutante", "Indigena", "Hombre Lobo", "Super" };
-        public string[] origen = { "Increible", "Brillante", "Asombroso", "Increible", "Inteligente" };
+        public string[] origen = { "Araña", "Gigante", "Diminuto", "Fuerte", "Lanza Rayos" };
 
-        generar(int dia)
+        public void generar(int dia, int mes);
     }
 }
