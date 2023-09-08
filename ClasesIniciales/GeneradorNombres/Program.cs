@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace GeneradorNombres
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            GeneradorNombres generador = new GeneradorNombres();
+
+            generador.generar(15);
+            Console.Read();
         }
     }
 }
