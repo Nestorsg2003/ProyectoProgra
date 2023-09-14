@@ -21,5 +21,6 @@ namespace GeneradorNombres
             }
             Console.WriteLine("Tu nombre de superheroe es: " + titulo[mes - 1] + " " + raza[dia - 1] + " " + origen[color]);
         }
+       
     }
 }

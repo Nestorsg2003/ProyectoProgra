@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadCaminar: 3
+  fuerzaSalto: 10
 --- !u!95 &141549243
 Animator:
   serializedVersion: 5
