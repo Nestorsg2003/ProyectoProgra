@@ -12,7 +12,7 @@ public class ControladorJugador : MonoBehaviour
     void Start()
     {
         MiCuerpo = GetComponent<Rigidbody2D>();
-        //cavernicola = GetComponent<SpriteRenderer>();
+       // cavernicola = GetComponent<SpriteRenderer>();
         miAnimador = GetComponent<Animator>();
     }
 
