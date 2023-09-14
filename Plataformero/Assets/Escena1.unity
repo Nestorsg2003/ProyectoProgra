@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 141549238}
   - component: {fileID: 141549237}
+  - component: {fileID: 141549243}
   - component: {fileID: 141549241}
   - component: {fileID: 141549240}
   - component: {fileID: 141549242}
@@ -260,6 +261,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadCaminar: 3
+--- !u!95 &141549243
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141549236}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7129021240efaee4fa1094be8cb14656, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1050892535
 GameObject:
   m_ObjectHideFlags: 0
