@@ -7,6 +7,8 @@ public class ControladorJugador : MonoBehaviour
     // Start is called before the first frame update
     public float velocidadCaminar = 3f;
     public float fuerzaSalto = 50f;
+    public bool enPiso = false;//Grounded
+    public float maxSaltos = 2f;
 
     private Rigidbody2D miCuerpo;
     //private SpriteRenderer cavernicola;
@@ -22,6 +24,9 @@ public class ControladorJugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //La comprobacion de piso
+        //es lo primero que hace
+        comprobarPiso();
         float velActualVert = miCuerpo.velocity.y;
         float movHoriz = Input.GetAxis("Horizontal");
 
@@ -47,10 +52,30 @@ public class ControladorJugador : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump"))
         {
-            print("Se presiono el boton de salto");
-            miCuerpo.AddForce(new Vector3 (0, fuerzaSalto, 0), ForceMode2D.Impulse);
+            if (enPiso)
+            {
+                miCuerpo.AddForce(new Vector3(0, fuerzaSalto, 0), ForceMode2D.Impulse);
+                maxSaltos = -1;
+            }
+            else if (enPiso == false)
+            {
+                
+            }
+            
         }
 
         miAnimador.SetFloat("vel_vert", velActualVert);
     }
+
+    public void comprobarPiso()
+    {
+        //Lanzar rayo de deteccion de colisiones
+        //hacia abajo desde la posicion del este objeto
+        //(cavernicola)
+        enPiso = Physics2D.Raycast(
+            transform.position,//desde donde
+            Vector2.down,//hacia abajo
+            0.1f);//distancia
+    }
+  
 }
