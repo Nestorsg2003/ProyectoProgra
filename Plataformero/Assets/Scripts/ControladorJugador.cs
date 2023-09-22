@@ -57,16 +57,23 @@ public class ControladorJugador : MonoBehaviour
         if (enPiso)
         {
             saltosRest = saltosMax;
+            miAnimador.SetBool("en_piso", true);
+        }
+        else if (enPiso==false)
+        {
+            miAnimador.SetBool("en_piso", false);
         }
 
         if (Input.GetButtonDown("Jump") && saltosRest > 0)
         {
-            miAnimador.SetBool("caminando", false);
             saltosRest--;
             miCuerpo.AddForce(new Vector3(0, fuerzaSalto, 0), ForceMode2D.Impulse);
+            miAnimador.SetBool("en_piso", false);
         }
+          
 
         miAnimador.SetFloat("vel_vert", velActualVert);
+       
     }
 
 
