@@ -8,17 +8,19 @@ public class ControladorJugador : MonoBehaviour
     public float velocidadCaminar = 3f;
     public float fuerzaSalto = 50f;
     public bool enPiso = false;//Grounded
-    public float maxSaltos = 2f;
+    public float saltosMax = 2f;
 
     private Rigidbody2D miCuerpo;
     //private SpriteRenderer cavernicola;
     private Animator miAnimador;
+    private float saltosRest;
 
     void Start()
     {
         miCuerpo = GetComponent<Rigidbody2D>();
        // cavernicola = GetComponent<SpriteRenderer>();
         miAnimador = GetComponent<Animator>();
+        saltosRest = saltosMax;
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class ControladorJugador : MonoBehaviour
         //La comprobacion de piso
         //es lo primero que hace
         comprobarPiso();
+
         float velActualVert = miCuerpo.velocity.y;
         float movHoriz = Input.GetAxis("Horizontal");
 
@@ -50,22 +53,22 @@ public class ControladorJugador : MonoBehaviour
             miCuerpo.velocity = new Vector3(0, velActualVert, 0);
             miAnimador.SetBool("caminando", false);
         }
-        if (Input.GetButtonDown("Jump"))
+
+        if (enPiso)
         {
-            if (enPiso)
-            {
-                miCuerpo.AddForce(new Vector3(0, fuerzaSalto, 0), ForceMode2D.Impulse);
-                maxSaltos = -1;
-            }
-            else if (enPiso == false)
-            {
-                
-            }
-            
+            saltosRest = saltosMax;
+        }
+
+        if (Input.GetButtonDown("Jump") && saltosRest > 0)
+        {
+            miAnimador.SetBool("caminando", false);
+            saltosRest--;
+            miCuerpo.AddForce(new Vector3(0, fuerzaSalto, 0), ForceMode2D.Impulse);
         }
 
         miAnimador.SetFloat("vel_vert", velActualVert);
     }
+
 
     public void comprobarPiso()
     {
@@ -77,5 +80,4 @@ public class ControladorJugador : MonoBehaviour
             Vector2.down,//hacia abajo
             0.1f);//distancia
     }
-  
 }
