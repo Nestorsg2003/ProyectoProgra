@@ -9,6 +9,8 @@ public class ControladorUI : MonoBehaviour
     public Text etiquetaHPHeroe;
     public Image barraHPHeroe;
     public Text etiquetaScore;
+    public Image corazon;
+    public Text etiquetaVidas;
 
     void Update()
     {
@@ -18,5 +20,6 @@ public class ControladorUI : MonoBehaviour
             heroe.hp / (float)heroe.hpMax;
         barraHPHeroe.fillAmount = porcentajeHP;
         etiquetaScore.text = "Score: " + heroe.score.ToString();
+        etiquetaVidas.text = "x" + heroe.vidas;
     }
 }

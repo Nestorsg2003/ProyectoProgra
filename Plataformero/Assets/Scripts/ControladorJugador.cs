@@ -87,4 +87,5 @@ public class ControladorJugador : MonoBehaviour
             Vector2.down,//hacia abajo
             0.1f);//distancia
     }
+
 }
