@@ -5,16 +5,26 @@ using UnityEngine;
 public class ZonaMuerte : MonoBehaviour
 {
     public int puntosVida = 1;
-    private void OnTriggerEnter2D(Collider2D trigger)
+    public GameObject efectoAguaPrefab;
+    private ReproductorSonidos misSonidos;
+
+    void Start()
     {
-        print(name + "hizo colision con" + trigger.gameObject.name);
-        GameObject otro = trigger.gameObject;
+        misSonidos = GetComponent<ReproductorSonidos>();
+    }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        print(name + "hizo colision con" + col.gameObject.name);
+        GameObject otro = col.gameObject;
         if (otro.tag == "Player")
         {
             //Accede al componente de tipo Personaje del objeto con el que choquè
             Personaje elPerso = otro.GetComponent<Personaje>();
             //Aplico el daño al otro invocando el metodo hacer daño
-            elPerso.perderVida(puntosVida, this.gameObject);
+            elPerso.matar(puntosVida, this.gameObject);
+
+            GameObject agua = Instantiate(efectoAguaPrefab, elPerso.transform);
+            misSonidos.reproducir("SPLASH");
         }
     }
 }

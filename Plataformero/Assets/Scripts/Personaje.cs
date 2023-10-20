@@ -9,8 +9,11 @@ public class Personaje : MonoBehaviour
     public int score = 0;
     public int vidas = 3;
     private Animator miAnimador;
+    public GameObject efectoSangrePrefab;
+    private ReproductorSonidos misSonidos;
     void Start()
     {
+        misSonidos = GetComponent<ReproductorSonidos>();
         miAnimador = GetComponent<Animator>();
     }
     public void hacerDanio(int puntos, GameObject atacante)
@@ -18,8 +21,12 @@ public class Personaje : MonoBehaviour
         print(name + "recibe daño de " + puntos + "por" + atacante.name);
         hp = hp - puntos;
         miAnimador.SetTrigger("DAÑAR");
+        GameObject sangre = Instantiate(efectoSangrePrefab, transform);
+        miAnimador.SetTrigger("DAÑAR");
     }
-    public void perderVida(int puntosVida, GameObject atacante)
+        
+    //public void matar()
+    public void matar(int puntosVida, GameObject atacante)
     {
         print(name + "Muere por " + atacante.name);
         vidas = vidas - puntosVida;
