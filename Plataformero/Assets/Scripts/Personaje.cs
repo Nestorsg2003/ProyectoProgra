@@ -22,7 +22,7 @@ public class Personaje : MonoBehaviour
         hp = hp - puntos;
         miAnimador.SetTrigger("DAÑAR");
         GameObject sangre = Instantiate(efectoSangrePrefab, transform);
-        miAnimador.SetTrigger("DAÑAR");
+        misSonidos.reproducir("DAÑAR");
     }
         
     //public void matar()
@@ -32,5 +32,6 @@ public class Personaje : MonoBehaviour
         vidas = vidas - puntosVida;
         hp = 0;
         miAnimador.SetTrigger("MATAR");
+        misSonidos.reproducir("MORIR");
     }
 }

@@ -908,7 +908,7 @@ MonoBehaviour:
   - accion: "DA\xD1AR"
     archivoSonido: {fileID: 8300000, guid: ef869e901e612bb4896301d904c08dc7, type: 3}
   - accion: MORIR
-    archivoSonido: {fileID: 8300000, guid: ad9d55620aecd514fb42c9cb6fd32c58, type: 3}
+    archivoSonido: {fileID: 8300000, guid: 7a29e6d627f8f2d42bfb4e9a76cf5ecd, type: 3}
 --- !u!82 &604114212
 AudioSource:
   m_ObjectHideFlags: 0
