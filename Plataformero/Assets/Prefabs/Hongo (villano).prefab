@@ -155,7 +155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd8678aff7038944a0bcb16012097b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocidadCaminar: 1
   distanciaAgro: 5
+  puntosDanio: 5
 --- !u!95 &6563151185996075452
 Animator:
   serializedVersion: 5

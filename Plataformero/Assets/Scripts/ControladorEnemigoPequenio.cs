@@ -10,6 +10,7 @@ public class ControladorEnemigoPequenio : MonoBehaviour
     private GameObject heroe;
     private Rigidbody2D miCuerpo;
     private Animator miAnimador;
+    public int puntosDanio = 10;
     void Start()
     {
         heroe = GameObject.FindWithTag("Player");
@@ -43,6 +44,18 @@ public class ControladorEnemigoPequenio : MonoBehaviour
         {//El heroe esta fuera de la zona de agro
             miCuerpo.velocity = new Vector3(0, 0, 0);
             miAnimador.SetBool("caminando", false);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        print(name + "hizo colision con" + collision.gameObject.name);
+        GameObject otro = collision.gameObject;
+        if (otro.tag == "Player")
+        {
+            //Accede al componente de tipo Personaje del objeto con el que choquè
+            Personaje elPerso = otro.GetComponent<Personaje>();
+            //Aplico el daño al otro invocando el metodo hacer daño
+            elPerso.hacerDanio(puntosDanio, this.gameObject);
         }
     }
 }
