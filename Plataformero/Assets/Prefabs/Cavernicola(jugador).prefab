@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c73c8b69f44adc044b840613880c1114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadCaminar: 4
+  velocidadCaminar: 5
   fuerzaSalto: 9
   enPiso: 0
   saltosMax: 1
