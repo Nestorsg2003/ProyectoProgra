@@ -32,6 +32,6 @@ public class Personaje : MonoBehaviour
         vidas = vidas - puntosVida;
         hp = 0;
         miAnimador.SetTrigger("MATAR");
-        misSonidos.reproducir("MORIR");
+        misSonidos.reproducir("MATAR");
     }
 }

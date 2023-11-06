@@ -13,6 +13,7 @@ public class Enemigo_mediano : MonoBehaviour
     private Animator miAnimador;
     public int puntosDanio = 10;
     //private CapsuleCollider2D miCollider;
+    public GameObject efectoGolpePrefab;
 
     void Start()
     {
@@ -30,7 +31,7 @@ public class Enemigo_mediano : MonoBehaviour
         float distancia = (posYo - posHeroe).magnitude;
         float velActualVert = miCuerpo.velocity.y;
 
-        if (distancia < distanciaAgro & distancia > distanciaAgroCorta)
+        if (distancia < distanciaAgro && distancia > distanciaAgroCorta)
         {//El heroe esta fuera de la zona de agro
             if(posHeroe.x > posYo.x)
             {//El heroe derecha villando
@@ -85,6 +86,7 @@ public class Enemigo_mediano : MonoBehaviour
             Personaje elPerso = otro.GetComponent<Personaje>();
             //Aplico el daño al otro invocando el metodo hacer daño
             elPerso.hacerDanio(puntosDanio, this.gameObject);
+            GameObject golpe = Instantiate(efectoGolpePrefab, elPerso.transform);
         }
     }
 }
