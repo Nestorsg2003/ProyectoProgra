@@ -11,6 +11,7 @@ public class ControladorEnemigoPequenio : MonoBehaviour
     private Rigidbody2D miCuerpo;
     private Animator miAnimador;
     public int puntosDanio = 10;
+
     void Start()
     {
         heroe = GameObject.FindWithTag("Player");
@@ -46,6 +47,7 @@ public class ControladorEnemigoPequenio : MonoBehaviour
             miAnimador.SetBool("caminando", false);
         }
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         print(name + "hizo colision con" + collision.gameObject.name);

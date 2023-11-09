@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2831908898795978943}
   - component: {fileID: 2831908898795978942}
   - component: {fileID: 2831908898795980609}
-  - component: {fileID: 2831908898795980608}
   - component: {fileID: 2831908898795980611}
   - component: {fileID: 2831908898795978940}
+  - component: {fileID: 1684032520961562244}
   m_Layer: 0
   m_Name: polloVillano
   m_TagString: Untagged
@@ -104,21 +104,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.014047563, y: 0.6993822}
   m_Size: {x: 0.9336549, y: 1.1493194}
   m_Direction: 0
---- !u!114 &2831908898795980608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2831908898795980610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdd8678aff7038944a0bcb16012097b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadCaminar: 0
-  distanciaAgro: 4
-  puntosDanio: 10
 --- !u!95 &2831908898795980611
 Animator:
   serializedVersion: 5
@@ -161,3 +146,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1684032520961562244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2831908898795980610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd8678aff7038944a0bcb16012097b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadCaminar: 0
+  distanciaAgro: 3
+  puntosDanio: 10
