@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1157819259894694896}
   m_Layer: 0
   m_Name: polloVillano
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,7 +146,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!114 &1684032520961562244
 MonoBehaviour:
   m_ObjectHideFlags: 0

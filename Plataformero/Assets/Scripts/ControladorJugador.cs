@@ -9,12 +9,12 @@ public class ControladorJugador : MonoBehaviour
     public float fuerzaSalto = 50f;
     public bool enPiso = false;//Grounded
     public float saltosMax = 2f;
-
     private Rigidbody2D miCuerpo;
     //private SpriteRenderer cavernicola;
     private Animator miAnimador;
     private float saltosRest;
     private ReproductorSonidos misSonidos;
+    public int danioArma = 4;
 
     void Start()
     {
@@ -73,10 +73,13 @@ public class ControladorJugador : MonoBehaviour
             miAnimador.SetBool("en_piso", false);
             misSonidos.reproducir("SALTAR");
         }
-          
 
+        if (Input.GetButtonDown("Fire1"))
+        {
+            miAnimador.SetTrigger("ATACANDO");
+        }
         miAnimador.SetFloat("vel_vert", velActualVert);
-       
+
     }
 
 
@@ -90,5 +93,16 @@ public class ControladorJugador : MonoBehaviour
             Vector2.down,//hacia abajo
             0.1f);//distancia
     }
-
+    private void OnTriggerEnter2D(Collider2D trigger)
+    {
+        print(name + "hizo colision con" + trigger.gameObject.name);
+        GameObject otro = trigger.gameObject;
+        if (otro.tag == "Enemy")
+        {
+            //Accede al componente de tipo Personaje del objeto con el que choquè
+            Personaje elPerso = otro.GetComponent<Personaje>();
+            //Aplico el daño al otro invocando el metodo hacer daño
+            elPerso.hacerDanio(danioArma, this.gameObject);
+        }
+    }
 }
