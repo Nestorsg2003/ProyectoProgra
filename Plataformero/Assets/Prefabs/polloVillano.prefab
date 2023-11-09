@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2831908898795980611}
   - component: {fileID: 2831908898795978940}
   - component: {fileID: 1684032520961562244}
+  - component: {fileID: 1157819259894694896}
   m_Layer: 0
   m_Name: polloVillano
   m_TagString: Untagged
@@ -161,3 +162,20 @@ MonoBehaviour:
   velocidadCaminar: 0
   distanciaAgro: 3
   puntosDanio: 10
+--- !u!114 &1157819259894694896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2831908898795980610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d55eb47b684e545bd4cd04ba0fba14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 60
+  hpMax: 100
+  score: 0
+  vidas: 3
+  efectoSangrePrefab: {fileID: 0}

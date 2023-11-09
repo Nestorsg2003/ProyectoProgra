@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5554532370647907416}
   - component: {fileID: 5554532370647907417}
   - component: {fileID: 5554532370647907418}
+  - component: {fileID: 4639951062821680492}
   m_Layer: 0
   m_Name: CamaleonVillanoM
   m_TagString: Untagged
@@ -162,3 +163,21 @@ MonoBehaviour:
   distanciaAgro: 7
   distanciaAgroCorta: 2
   puntosDanio: 10
+  efectoGolpePrefab: {fileID: 0}
+--- !u!114 &4639951062821680492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5554532370647907419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d55eb47b684e545bd4cd04ba0fba14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 60
+  hpMax: 100
+  score: 0
+  vidas: 3
+  efectoSangrePrefab: {fileID: 0}
