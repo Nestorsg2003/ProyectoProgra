@@ -11,9 +11,10 @@ public class ControladorEnemigoPequenio : MonoBehaviour
     private Rigidbody2D miCuerpo;
     private Animator miAnimador;
     public int puntosDanio = 10;
-
+    private Personaje miPersonaje;
     void Start()
     {
+        miPersonaje = GetComponent<Personaje>();
         heroe = GameObject.FindWithTag("Player");
         miCuerpo = GetComponent<Rigidbody2D>();
         miAnimador = GetComponent<Animator>();
@@ -26,7 +27,7 @@ public class ControladorEnemigoPequenio : MonoBehaviour
         float distancia = (posYo - posHeroe).magnitude;
         float velActualVert = miCuerpo.velocity.y;
 
-        if (distancia < distanciaAgro)
+        if (distancia < distanciaAgro && !miPersonaje.aturdido && !miPersonaje.muerto)
         {//El heroe esta fuera de la zona de agro
             if(posHeroe.x > posYo.x)
             {//El heroe derecha villando

@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadCaminar: 3
   distanciaAgro: 5
-  distanciaAgroCorta: 1
+  distanciaAgroCorta: 2
   puntosDanio: 10
   efectoGolpePrefab: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
 --- !u!114 &4639951062821680492

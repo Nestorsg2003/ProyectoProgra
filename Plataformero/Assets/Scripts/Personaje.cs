@@ -12,14 +12,13 @@ public class Personaje : MonoBehaviour
     private Animator miAnimador;
     public GameObject efectoSangrePrefab;
     private ReproductorSonidos misSonidos;
+    public bool aturdido = false;
+    public bool muerto = false;
 
     void Start()
     {
         misSonidos = GetComponent<ReproductorSonidos>();
         miAnimador = GetComponent<Animator>();
-    }
-    void Update()
-    {
     }
     public void hacerDanio(int puntos, GameObject atacante)
     {
@@ -28,15 +27,34 @@ public class Personaje : MonoBehaviour
         miAnimador.SetTrigger("DAÑAR");
         GameObject sangre = Instantiate(efectoSangrePrefab, transform);
         misSonidos.reproducir("DAÑAR");
+        aturdido = true;
+        Invoke("desaturdir", 1);
+        if (hp <= 0 && vidas>0)
+        {
+            vidas--;
+            hp = hpMax;
+            Personaje elPerso = GetComponent<Personaje>();
+            elPerso.matar(this.gameObject);
+
+        }    
+
     }
-        
-    //public void matar()
-    public void matar(int puntosVida, GameObject atacante)
+
+    public void matar(GameObject atacante)
     {
         print(name + "Muere por " + atacante.name);
-        vidas = vidas - puntosVida;
+        vidas = 0;
         hp = 0;
         miAnimador.SetTrigger("MATAR");
         misSonidos.reproducir("MATAR");
+        muerto = true;
+        if (vidas <= 0)
+        {
+        }
     }
+    private void desaturdir()
+    {
+        aturdido= false;
+    }
+
 }

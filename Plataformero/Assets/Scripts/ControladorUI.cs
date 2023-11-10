@@ -11,7 +11,6 @@ public class ControladorUI : MonoBehaviour
     public Text etiquetaScore;
     public Image corazon;
     public Text etiquetaVidas;
-
     void Update()
     {
         etiquetaHPHeroe.text =
@@ -22,4 +21,5 @@ public class ControladorUI : MonoBehaviour
         etiquetaScore.text = "Score: " + heroe.score.ToString();
         etiquetaVidas.text = "x" + heroe.vidas;
     }
+
 }

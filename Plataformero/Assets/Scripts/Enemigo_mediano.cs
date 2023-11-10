@@ -13,9 +13,11 @@ public class Enemigo_mediano : MonoBehaviour
     private Animator miAnimador;
     public int puntosDanio = 10;
     public GameObject efectoGolpePrefab;
+    private Personaje miPersonaje;
 
     void Start()
     {
+        miPersonaje = GetComponent<Personaje>();
         heroe = GameObject.FindWithTag("Player");
         miCuerpo = GetComponent<Rigidbody2D>();
         miAnimador = GetComponent<Animator>();
@@ -29,7 +31,7 @@ public class Enemigo_mediano : MonoBehaviour
         float distancia = (posYo - posHeroe).magnitude;
         float velActualVert = miCuerpo.velocity.y;
 
-        if (distancia < distanciaAgro && distancia > distanciaAgroCorta)
+        if (distancia < distanciaAgro && distancia > distanciaAgroCorta && !miPersonaje.aturdido && !miPersonaje.muerto)
         {//El heroe esta fuera de la zona de agro
             if(posHeroe.x > posYo.x)
             {//El heroe derecha villando
@@ -46,7 +48,7 @@ public class Enemigo_mediano : MonoBehaviour
                 miAnimador.SetBool("atacando", false);
             }
         }
-        else if (distancia < distanciaAgro && distancia < distanciaAgroCorta)
+        else if (distancia < distanciaAgro && distancia < distanciaAgroCorta && !miPersonaje.aturdido && !miPersonaje.muerto)
         {
             if (posHeroe.x > posYo.x)
             {

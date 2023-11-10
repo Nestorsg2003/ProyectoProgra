@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ControladorJugador : MonoBehaviour
 {
@@ -15,9 +17,12 @@ public class ControladorJugador : MonoBehaviour
     private float saltosRest;
     private ReproductorSonidos misSonidos;
     public int danioArma = 4;
+    private Personaje miPersonaje;
+    public Image gameover;
 
     void Start()
     {
+        miPersonaje = GetComponent<Personaje>();
         miCuerpo = GetComponent<Rigidbody2D>();
        // cavernicola = GetComponent<SpriteRenderer>();
         miAnimador = GetComponent<Animator>();
@@ -35,14 +40,14 @@ public class ControladorJugador : MonoBehaviour
         float velActualVert = miCuerpo.velocity.y;
         float movHoriz = Input.GetAxis("Horizontal");
 
-        if (movHoriz > 0)
+        if (movHoriz > 0 && !miPersonaje.aturdido && !miPersonaje.muerto)
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
             miCuerpo.velocity = new Vector3(velocidadCaminar, velActualVert, 0);
             //cavernicola.flipX = false;
             miAnimador.SetBool("caminando", true);
         }
-        else if (movHoriz < 0)
+        else if (movHoriz < 0 && !miPersonaje.aturdido && !miPersonaje.muerto)
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
             miCuerpo.velocity = new Vector3(-velocidadCaminar, velActualVert, 0);
@@ -66,7 +71,7 @@ public class ControladorJugador : MonoBehaviour
             miAnimador.SetBool("en_piso", false);
         }
 
-        if (Input.GetButtonDown("Jump") && saltosRest > 0)
+        if (Input.GetButtonDown("Jump") && saltosRest > 0 && !miPersonaje.aturdido && !miPersonaje.muerto)
         {
             saltosRest--;
             miCuerpo.AddForce(new Vector3(0, fuerzaSalto, 0), ForceMode2D.Impulse);
@@ -74,12 +79,20 @@ public class ControladorJugador : MonoBehaviour
             misSonidos.reproducir("SALTAR");
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !miPersonaje.aturdido)
         {
             miAnimador.SetTrigger("ATACANDO");
         }
         miAnimador.SetFloat("vel_vert", velActualVert);
 
+        if (miPersonaje.hp <= 0)
+        {
+            SceneManager.LoadScene(1);
+        }
+        else if (miPersonaje.hp <= 0 && miPersonaje.vidas < 0)
+        {
+            gameover.gameObject.SetActive(true);
+        }
     }
 
 
