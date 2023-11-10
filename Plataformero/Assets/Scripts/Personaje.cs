@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Personaje : MonoBehaviour
 {
@@ -11,10 +12,14 @@ public class Personaje : MonoBehaviour
     private Animator miAnimador;
     public GameObject efectoSangrePrefab;
     private ReproductorSonidos misSonidos;
+
     void Start()
     {
         misSonidos = GetComponent<ReproductorSonidos>();
         miAnimador = GetComponent<Animator>();
+    }
+    void Update()
+    {
     }
     public void hacerDanio(int puntos, GameObject atacante)
     {
