@@ -18,7 +18,6 @@ public class ControladorJugador : MonoBehaviour
     private ReproductorSonidos misSonidos;
     public int danioArma = 4;
     private Personaje miPersonaje;
-    public Image gameover;
 
     void Start()
     {
@@ -87,15 +86,18 @@ public class ControladorJugador : MonoBehaviour
 
         if (miPersonaje.hp <= 0)
         {
-            SceneManager.LoadScene(1);
+            Invoke("morirPersonaje", 1.0f);
         }
-        else if (miPersonaje.hp <= 0 && miPersonaje.vidas < 0)
+        else if (miPersonaje.hp <= 0 && Personaje.vidas < 0)
         {
-            gameover.gameObject.SetActive(true);
+
         }
     }
 
-
+    public void morirPersonaje()
+    {
+        SceneManager.LoadScene(1);
+    }
     public void comprobarPiso()
     {
         //Lanzar rayo de deteccion de colisiones

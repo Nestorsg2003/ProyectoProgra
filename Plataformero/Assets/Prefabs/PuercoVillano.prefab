@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd8678aff7038944a0bcb16012097b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadCaminar: 3
+  velocidadCaminar: 2
   distanciaAgro: 8
   puntosDanio: 10
 --- !u!114 &7565916339284611777
@@ -181,6 +181,8 @@ MonoBehaviour:
   score: 0
   vidas: 3
   efectoSangrePrefab: {fileID: 5880797563127281583, guid: 265d3a5ba69981a4698ceabcedf368b0, type: 3}
+  aturdido: 0
+  muerto: 0
 --- !u!82 &4688931669682971496
 AudioSource:
   m_ObjectHideFlags: 0

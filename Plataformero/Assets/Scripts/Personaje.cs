@@ -8,7 +8,7 @@ public class Personaje : MonoBehaviour
     public int hp = 60;
     public int hpMax = 100;
     public int score = 0;
-    public int vidas = 3;
+    public static int vidas = 3;
     private Animator miAnimador;
     public GameObject efectoSangrePrefab;
     private ReproductorSonidos misSonidos;
@@ -29,14 +29,16 @@ public class Personaje : MonoBehaviour
         misSonidos.reproducir("DAÑAR");
         aturdido = true;
         Invoke("desaturdir", 1);
-        if (hp <= 0 && vidas>0)
+        if (hp <= 0 && vidas <= 0)
         {
-            vidas--;
-            hp = hpMax;
             Personaje elPerso = GetComponent<Personaje>();
             elPerso.matar(this.gameObject);
-
         }    
+        else if (hp <= 0 && vidas > 0)
+        {
+            vidas--;
+            muerto = true;
+        }
 
     }
 
@@ -47,14 +49,15 @@ public class Personaje : MonoBehaviour
         hp = 0;
         miAnimador.SetTrigger("MATAR");
         misSonidos.reproducir("MATAR");
+
         muerto = true;
-        if (vidas <= 0)
-        {
-        }
     }
     private void desaturdir()
     {
         aturdido= false;
     }
-
+    public bool gameOver()
+    {
+        return vidas <= 0;
+    }
 }

@@ -11,6 +11,11 @@ public class ControladorUI : MonoBehaviour
     public Text etiquetaScore;
     public Image corazon;
     public Text etiquetaVidas;
+    public GameObject gameOver;
+    void Start()
+    {
+        
+    }
     void Update()
     {
         etiquetaHPHeroe.text =
@@ -19,7 +24,12 @@ public class ControladorUI : MonoBehaviour
             heroe.hp / (float)heroe.hpMax;
         barraHPHeroe.fillAmount = porcentajeHP;
         etiquetaScore.text = "Score: " + heroe.score.ToString();
-        etiquetaVidas.text = "x" + heroe.vidas;
+        etiquetaVidas.text = "x" + Personaje.vidas;
+        if (Personaje.vidas <= 0)
+        {
+            gameOver.SetActive(true);
+        }
+        
     }
 
 }
