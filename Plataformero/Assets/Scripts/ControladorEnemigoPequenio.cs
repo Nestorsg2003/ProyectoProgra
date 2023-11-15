@@ -29,13 +29,13 @@ public class ControladorEnemigoPequenio : MonoBehaviour
 
         if (distancia < distanciaAgro && !miPersonaje.aturdido && !miPersonaje.muerto)
         {//El heroe esta fuera de la zona de agro
-            if(posHeroe.x > posYo.x)
+            if(posHeroe.x > posYo.x && !miPersonaje.aturdido && !miPersonaje.muerto)
             {//El heroe derecha villando
                 transform.rotation = Quaternion.Euler(0, 0, 0);
                 miCuerpo.velocity = new Vector3(velocidadCaminar, velActualVert, 0);
                 miAnimador.SetBool("caminando", true);
             }
-            else
+            else if (posHeroe.x < posYo.x && !miPersonaje.aturdido && !miPersonaje.muerto)
             {//El heroe izquierda villando
                 transform.rotation = Quaternion.Euler(0, 180, 0);
                 miCuerpo.velocity = new Vector3(-velocidadCaminar, velActualVert, 0);
