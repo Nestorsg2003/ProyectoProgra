@@ -33,14 +33,14 @@ public class Enemigo_mediano : MonoBehaviour
 
         if (distancia < distanciaAgro && distancia > distanciaAgroCorta && !miPersonaje.aturdido && !miPersonaje.muerto)
         {//El heroe esta fuera de la zona de agro
-            if(posHeroe.x > posYo.x && !miPersonaje.aturdido && !miPersonaje.muerto)
+            if(posHeroe.x > posYo.x)
             {//El heroe derecha villando
                 transform.rotation = Quaternion.Euler(0, 0, 0);
                 miCuerpo.velocity = new Vector3(velocidadCaminar, velActualVert, 0);
                 miAnimador.SetBool("caminando", true);
                 miAnimador.SetBool("atacando", false);
             }
-            else if (posHeroe.x < posYo.x && !miPersonaje.aturdido && !miPersonaje.muerto)
+            else
             {//El heroe izquierda villando
                 transform.rotation = Quaternion.Euler(0, 180, 0);
                 miCuerpo.velocity = new Vector3(-velocidadCaminar, velActualVert, 0);
@@ -50,14 +50,14 @@ public class Enemigo_mediano : MonoBehaviour
         }
         else if (distancia < distanciaAgro && distancia < distanciaAgroCorta && !miPersonaje.aturdido && !miPersonaje.muerto)
         {
-            if (posHeroe.x > posYo.x && !miPersonaje.aturdido && !miPersonaje.muerto)
+            if (posHeroe.x > posYo.x)
             {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
                 miCuerpo.velocity = new Vector3(0, 0, 0);
                 miAnimador.SetBool("atacando", true);
                 miAnimador.SetBool("caminando", false);
             }
-            else if (posHeroe.x < posYo.x && !miPersonaje.aturdido && !miPersonaje.muerto)
+            else
             {
                 transform.rotation = Quaternion.Euler(0, 180, 0);
                 miCuerpo.velocity = new Vector3(0, 0, 0);

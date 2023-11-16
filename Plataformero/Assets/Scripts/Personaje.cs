@@ -28,13 +28,13 @@ public class Personaje : MonoBehaviour
         GameObject sangre = Instantiate(efectoSangrePrefab, transform);
         misSonidos.reproducir("DAÑAR");
         aturdido = true;
-        Invoke("desaturdir", 2);
+        Invoke("desaturdir", 1);
         if (hp <= 0 && vidas <= 0)
         {
             Personaje elPerso = GetComponent<Personaje>();
             elPerso.matar(this.gameObject);
         }    
-        if (hp <= 0 && vidas > 0)
+        else if (hp <= 0 && vidas > 0)
         {
             vidas--;
             muerto = true;
@@ -49,10 +49,15 @@ public class Personaje : MonoBehaviour
         hp = 0;
         miAnimador.SetTrigger("MATAR");
         misSonidos.reproducir("MATAR");
+
         muerto = true;
     }
     private void desaturdir()
     {
         aturdido= false;
+    }
+    public bool gameOver()
+    {
+        return vidas <= 0;
     }
 }

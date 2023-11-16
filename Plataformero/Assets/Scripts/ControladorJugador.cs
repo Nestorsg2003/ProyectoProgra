@@ -16,7 +16,7 @@ public class ControladorJugador : MonoBehaviour
     private Animator miAnimador;
     private float saltosRest;
     private ReproductorSonidos misSonidos;
-    public int danioArma = 10;
+    public int danioArma = 4;
     private Personaje miPersonaje;
 
     void Start()
@@ -30,7 +30,7 @@ public class ControladorJugador : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() 
+    void Update()
     {
         //La comprobacion de piso
         //es lo primero que hace
@@ -43,12 +43,14 @@ public class ControladorJugador : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
             miCuerpo.velocity = new Vector3(velocidadCaminar, velActualVert, 0);
+            //cavernicola.flipX = false;
             miAnimador.SetBool("caminando", true);
         }
         else if (movHoriz < 0 && !miPersonaje.aturdido && !miPersonaje.muerto)
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
             miCuerpo.velocity = new Vector3(-velocidadCaminar, velActualVert, 0);
+            //cavernicola.flipX = true;
             miAnimador.SetBool("caminando", true);
         }
 
@@ -84,9 +86,12 @@ public class ControladorJugador : MonoBehaviour
 
         if (miPersonaje.hp <= 0)
         {
-            Invoke("morirPersonaje", 3f);
+            Invoke("morirPersonaje", 1.0f);
         }
+        else if (miPersonaje.hp <= 0 && Personaje.vidas < 0)
+        {
 
+        }
     }
 
     public void morirPersonaje()
