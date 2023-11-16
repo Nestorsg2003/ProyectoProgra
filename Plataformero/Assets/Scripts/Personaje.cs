@@ -34,7 +34,7 @@ public class Personaje : MonoBehaviour
             Personaje elPerso = GetComponent<Personaje>();
             elPerso.matar(this.gameObject);
         }    
-        else if (hp <= 0 && vidas > 0)
+        if (hp <= 0 && vidas > 0)
         {
             vidas--;
             muerto = true;
