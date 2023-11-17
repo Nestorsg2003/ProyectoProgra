@@ -26,10 +26,10 @@ public class ControladorJugador : MonoBehaviour
     public float wallJumpDuration;
     public Vector2 wallJumpForce;
     bool wallJumping;
-
+    public float mirandoPersonaje;
     //DASH
 
-    public float velocidadDash = 2;
+    public float velocidadDash;
     public float tiempoDash;
     private bool puedeHacerDash = true;
     public bool sePuedeMover = true;
@@ -45,21 +45,57 @@ public class ControladorJugador : MonoBehaviour
     private void Update()
     {
         comprobarPiso();
+        isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(0.2f, 0.1f), 0, groundLayer);
+        isWallTouch = Physics2D.OverlapBox(wallCheck.position, new Vector2(0.1f, 0.8f), 0, groundLayer);
+        //DASH
 
+        if(Input.GetKeyDown(KeyCode.B) && puedeHacerDash)
+        {
+            StartCoroutine(Dash());
+        }
+        if (enPiso)
+        {
+            miAnimador.SetBool("ENPISO", true);
+        }
+        else if (enPiso == false)
+        {
+            miAnimador.SetBool("ENPISO", false);
+        }
+        if (sePuedeMover)
+        {
+            Mover();
+            if (Input.GetButtonDown("Jump"))
+            {
+                jump = true;
+
+            }
+            if (jump)
+            {
+                Jump();
+                miAnimador.SetBool("ENPISO", false);
+            }
+        }
+
+    }
+
+    private void FixedUpdate()
+    {
+    }
+    public void Mover()
+    {
         float velActualVert = miCuerpo.velocity.y;
         float movHoriz = Input.GetAxisRaw("Horizontal");
         miAnimador.SetFloat("VELVERT", velActualVert);
-
-        isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(0.2f, 0.1f), 0, groundLayer);
-        isWallTouch = Physics2D.OverlapBox(wallCheck.position, new Vector2(0.1f, 0.8f), 0, groundLayer);
-        if (movHoriz > 0 && sePuedeMover)
+        if (movHoriz > 0)
         {
+            mirandoPersonaje = 1;
             transform.rotation = Quaternion.Euler(0, 0, 0);
             miCuerpo.velocity = new Vector3(velocidadCorrer, velActualVert, 0);
             miAnimador.SetBool("CAMINAR", true);
         }
-        else if (movHoriz < 0 && sePuedeMover)
+        else if (movHoriz < 0)
         {
+            mirandoPersonaje = -1;
             transform.rotation = Quaternion.Euler(0, 180, 0);
             miCuerpo.velocity = new Vector3(-velocidadCorrer, velActualVert, 0);
             miAnimador.SetBool("CAMINAR", true);
@@ -70,22 +106,9 @@ public class ControladorJugador : MonoBehaviour
             miAnimador.SetBool("CAMINAR", false);
         }
 
-        if (enPiso)
-        {
-            miAnimador.SetBool("ENPISO", true);
-        }
-        else if (enPiso == false)
-        {
-            miAnimador.SetBool("ENPISO", false);
-        }
 
-        if (Input.GetButtonDown("Jump") && sePuedeMover)
-        {
-            jump = true;
-            miAnimador.SetBool("ENPISO", false);
-        }
 
-        if(isWallTouch && !isGrounded && movHoriz !=0)
+        if (isWallTouch && !isGrounded && movHoriz != 0)
         {
             isSliding = true;
         }
@@ -93,23 +116,8 @@ public class ControladorJugador : MonoBehaviour
         {
             isSliding = false;
         }
-        if (jump)
-        {
-            Jump();
-        }
 
-        //DASH
-
-        if(Input.GetKeyDown(KeyCode.B) && puedeHacerDash)
-        {
-            StartCoroutine(Dash());
-        }
-    }
-
-    private void FixedUpdate()
-    {
         //WALLJUMP
-        float movHoriz = Input.GetAxisRaw("Horizontal");
 
         if (isSliding && sePuedeMover)
         {
@@ -124,7 +132,6 @@ public class ControladorJugador : MonoBehaviour
         {
             miCuerpo.velocity = new Vector2(movHoriz * velocidadCorrer, miCuerpo.velocity.y);
         }
-
     }
     void Jump()
     {
@@ -152,7 +159,7 @@ public class ControladorJugador : MonoBehaviour
         sePuedeMover = false;
         puedeHacerDash = false;
         miCuerpo.gravityScale = 0;
-        miCuerpo.velocity = new Vector2(velocidadDash, 0);
+        miCuerpo.velocity = new Vector2(velocidadDash * mirandoPersonaje, 0);
         yield return new WaitForSeconds(tiempoDash);
         sePuedeMover = true;
         puedeHacerDash = true;
