@@ -56,8 +56,4 @@ public class Personaje : MonoBehaviour
     {
         aturdido= false;
     }
-    public bool gameOver()
-    {
-        return vidas <= 0;
-    }
 }
