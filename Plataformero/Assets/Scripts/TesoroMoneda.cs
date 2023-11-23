@@ -25,10 +25,11 @@ public class TesoroMoneda : MonoBehaviour
         GameObject otro = agarrar.gameObject;
         if (otro.tag == "Player")
         {
+            miAnimador.SetTrigger("OBTENER");
             heroe.score ++;
             monedas ++;
-            miAnimador.SetTrigger("OBTENER");
-            Destroy(gameObject, 1);
+            GetComponent<Collider2D>().enabled = false;
+            Destroy(gameObject, 3);
         }
     }
 }
