@@ -12,7 +12,6 @@ public class ControladorUI : MonoBehaviour
     public Image corazon;
     public Text etiquetaVidas;
     public GameObject gameOver;
-    public GameObject botonInput;
     void Start()
     {
         
@@ -31,15 +30,6 @@ public class ControladorUI : MonoBehaviour
             gameOver.SetActive(true);
         }
         
-    }
-    public void aparecerBoton()
-    {
-        botonInput.SetActive(true);
-    }
-
-    public void desaparecerBoton()
-    {
-        botonInput.SetActive(false);
     }
 
 }

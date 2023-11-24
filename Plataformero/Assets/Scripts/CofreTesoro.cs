@@ -5,13 +5,16 @@ using UnityEngine.UI;
 
 public class CofreTesoro : MonoBehaviour
 {
+    private ReproductorSonidos misSonidos;
     private Animator miAnimador;
     public GameObject tesoro;
     public bool cercaCofre = false;
+    public GameObject boton;
+    public GameObject efectoBrilloPrefab;
     void Start()
     {
         miAnimador = GetComponent<Animator>();
-
+        misSonidos = GetComponent<ReproductorSonidos>();
     }
 
     void Update()
@@ -19,7 +22,9 @@ public class CofreTesoro : MonoBehaviour
         if (Input.GetButtonDown("Fire2") && cercaCofre)
         {
             miAnimador.SetTrigger("OBTENER");
-            Instantiate(tesoro, transform);
+            Instantiate(tesoro, transform.position, Quaternion.identity);
+            misSonidos.reproducir("ABRIR");
+
         }
 
     }
@@ -32,10 +37,10 @@ public class CofreTesoro : MonoBehaviour
         
         if (otro.tag == "Player")
         {
-            ControladorUI canvas = GetComponent<ControladorUI>();
-            //Aplico el daño al otro invocando el metodo hacer daño
-            canvas.aparecerBoton();
             cercaCofre = true;
+            boton.SetActive(true);
+            misSonidos.reproducir("ENTRAR");
+            GameObject brillo = Instantiate(efectoBrilloPrefab, transform);
         }
     }
     private void OnTriggerExit2D(Collider2D fuera)
@@ -48,9 +53,7 @@ public class CofreTesoro : MonoBehaviour
         if (otro.tag == "Player")
         {
             cercaCofre = false;
-            ControladorUI canvas = GetComponent<ControladorUI>();
-            //Aplico el daño al otro invocando el metodo hacer daño
-            canvas.desaparecerBoton();
+            boton.SetActive(false);
         }
     }
 }
