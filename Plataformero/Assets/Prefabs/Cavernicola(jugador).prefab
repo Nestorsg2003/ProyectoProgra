@@ -178,12 +178,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1d55eb47b684e545bd4cd04ba0fba14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 68
+  hp: 100
   hpMax: 100
   score: 0
   efectoSangrePrefab: {fileID: 4553287630450876385, guid: 15483e51212e3d74886ea57291f4639a, type: 3}
   aturdido: 0
   muerto: 0
+  efectoBurbujasPrefab: {fileID: 5985634496115995773, guid: 463cf9f7af4680240898f6aeba3fe3e6, type: 3}
 --- !u!82 &5807019703125267546
 AudioSource:
   m_ObjectHideFlags: 0

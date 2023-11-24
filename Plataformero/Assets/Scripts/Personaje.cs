@@ -5,6 +5,13 @@ using System;
 
 public class Personaje : MonoBehaviour
 {
+    public enum TiposdeDanio
+    {
+        Fisico,
+        Magico,
+        Toxico
+    }
+
     public int hp = 60;
     public int hpMax = 100;
     public int score = 0;
@@ -14,20 +21,17 @@ public class Personaje : MonoBehaviour
     private ReproductorSonidos misSonidos;
     public bool aturdido = false;
     public bool muerto = false;
-
+    public GameObject efectoBurbujasPrefab;
     void Start()
     {
         misSonidos = GetComponent<ReproductorSonidos>();
         miAnimador = GetComponent<Animator>();
     }
-    public void hacerDanio(int puntos, GameObject atacante)
+    public void hacerDanio(int puntos, GameObject atacante, TiposdeDanio tipo = TiposdeDanio.Fisico)
     {
-        print(name + "recibe daño de " + puntos + "por" + atacante.name);
+        print(name + "recibe daño de " + puntos + "por " + atacante.name + " de tipo" + tipo);
         hp = hp - puntos;
-        miAnimador.SetTrigger("DAÑAR");
-        GameObject sangre = Instantiate(efectoSangrePrefab, transform);
         misSonidos.reproducir("DAÑAR");
-        aturdido = true;
         Invoke("desaturdir", 1);
         if (hp <= 0 && vidas <= 0)
         {
@@ -38,6 +42,16 @@ public class Personaje : MonoBehaviour
         {
             vidas--;
             muerto = true;
+        }
+        if(tipo == TiposdeDanio.Fisico)
+        {
+            miAnimador.SetTrigger("DAÑAR");
+            aturdido = true;
+            GameObject sangre = Instantiate(efectoSangrePrefab, transform);
+        }
+        else if (tipo == TiposdeDanio.Toxico)
+        {
+            GameObject burbujas = Instantiate(efectoBurbujasPrefab, transform);
         }
 
     }

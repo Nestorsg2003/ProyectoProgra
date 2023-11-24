@@ -154,9 +154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13332e8498edfd45b2afdd33c3e8a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntosDanio: 5
-  repetirDanio: 2
+  puntosDanio: 10
+  repetirDanio: 3
   efectoVenenoPrefab: {fileID: 4425129568585013132, guid: bbeeb0ddc21369746aaaae5c5c1c09cf, type: 3}
+  velocidadMenos: 2
 --- !u!61 &5515745503406212188
 BoxCollider2D:
   m_ObjectHideFlags: 0

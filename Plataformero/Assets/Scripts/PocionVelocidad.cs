@@ -6,8 +6,7 @@ public class PocionVelocidad : MonoBehaviour
 {
     private ReproductorSonidos misSonidos;
     private Animator miAnimador;
-    public ControladorJugador persoPlayer;
-    private Collider2D miCollider;
+    private ControladorJugador persoPlayer;
     public int velocidadMas = 2;
     public GameObject efectoRayosPrefab;
 

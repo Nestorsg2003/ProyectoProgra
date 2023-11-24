@@ -11,6 +11,9 @@ public class Veneno : MonoBehaviour
     private Animator miAnimador;
     public GameObject efectoVenenoPrefab;
 
+    private ControladorJugador persoPlayer;
+    public int velocidadMenos = 2;
+
     void Start()
     {
         miAnimador = GetComponent<Animator>();
@@ -31,6 +34,10 @@ public class Veneno : MonoBehaviour
             miAnimador.SetTrigger("OBTENER");
             misSonidos.reproducir("BEBER");
             GameObject gas = Instantiate(efectoVenenoPrefab, transform);
+
+            persoPlayer = otroObjeto.GetComponent<ControladorJugador>();
+            persoPlayer.velocidadCaminar = persoPlayer.velocidadCaminar / velocidadMenos;
+            Invoke("velocidadDisminuida", 6f);
         }
     }
 
@@ -39,7 +46,16 @@ public class Veneno : MonoBehaviour
         if (heroe != null)
         {
             misSonidos.reproducir("ENVENENADO");
-            heroe.hacerDanio(puntosDanio, this.gameObject);
+            heroe.hacerDanio(puntosDanio, this.gameObject, Personaje.TiposdeDanio.Toxico);
+        }
+    }
+    public void velocidadDisminuida()
+    {
+        Debug.Log("Velocidad orginal");
+        if (persoPlayer != null)
+        {
+            persoPlayer.velocidadCaminar = persoPlayer.velocidadCaminar * velocidadMenos;
+            Debug.Log("Velocidad caminar = " + persoPlayer.velocidadCaminar);
         }
     }
 }
