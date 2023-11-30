@@ -26,6 +26,7 @@ public class Meta : MonoBehaviour
             Personaje elPerso = otro.GetComponent<Personaje>();
             elPerso.festejar(this.gameObject);
             Invoke("siguienteEscena", 6f);
+            miAnimador.SetTrigger("GANAR");
         }
     }
 
