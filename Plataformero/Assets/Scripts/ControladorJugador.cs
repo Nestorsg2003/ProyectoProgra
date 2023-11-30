@@ -96,7 +96,7 @@ public class ControladorJugador : MonoBehaviour
 
     public void morirPersonaje()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
     public void comprobarPiso()
     {

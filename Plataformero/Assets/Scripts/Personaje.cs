@@ -51,6 +51,7 @@ public class Personaje : MonoBehaviour
         }
         else if (tipo == TiposdeDanio.Toxico)
         {
+            miAnimador.SetTrigger("ENVENENADO");
             GameObject burbujas = Instantiate(efectoBurbujasPrefab, transform);
         }
 
@@ -63,11 +64,15 @@ public class Personaje : MonoBehaviour
         hp = 0;
         miAnimador.SetTrigger("MATAR");
         misSonidos.reproducir("MATAR");
-
         muerto = true;
     }
     private void desaturdir()
     {
         aturdido= false;
+    }
+    public void festejar(GameObject atacante)
+    {
+        miAnimador.SetTrigger("FESTEJAR");
+        muerto = true;
     }
 }

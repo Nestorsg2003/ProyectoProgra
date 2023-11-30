@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ede4b03d4049f481a80ce6756418b385
+guid: c86bcf471680bd643bec073650fcf3f2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -29,8 +29,8 @@ TextureImporter:
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 1024
+  textureFormat: 1
+  maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
     filterMode: 0
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 70
+  spritePixelsToUnits: 18
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -62,15 +62,15 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
-  cookieLightType: 1
+  applyGammaDecoding: 0
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -79,7 +79,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -91,7 +91,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -105,85 +105,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: coin-animation_0
+      name: bandera-victoria_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 65
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 60
+        height: 90
+      alignment: 9
+      pivot: {x: 0.145079, y: 0.02677206}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3213e26135de0ac70800000000000000
-      internalID: 8980438598086963491
+      spriteID: 8535d9c9d9827b144ad6e796a9733720
+      internalID: 2058969819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin-animation_1
+      name: bandera-victoria_1
       rect:
         serializedVersion: 2
-        x: 71
+        x: 60
         y: 0
-        width: 51
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 60
+        height: 90
+      alignment: 9
+      pivot: {x: 0.145079, y: 0.02677206}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c7c5bc9deb46a6e20800000000000000
-      internalID: 3344596444136561788
+      spriteID: 91b4492f1ff549644b153ddb0681b514
+      internalID: -1231599696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin-animation_2
+      name: bandera-victoria_2
       rect:
         serializedVersion: 2
-        x: 149
+        x: 120
         y: 0
-        width: 23
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 60
+        height: 90
+      alignment: 9
+      pivot: {x: 0.145079, y: 0.02677206}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 427b1cdc640541010800000000000000
-      internalID: 1158639269171017508
+      spriteID: 448685fd348ea624d979dc4d3041bd66
+      internalID: 664805597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin-animation_3
+      name: bandera-victoria_3
       rect:
         serializedVersion: 2
-        x: 199
+        x: 180
         y: 0
-        width: 50
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 60
+        height: 90
+      alignment: 9
+      pivot: {x: 0.145079, y: 0.02677206}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e6ef0a5cb5af635a0800000000000000
-      internalID: -6541766136644436370
+      spriteID: ba3190d4c721e084da60d83d2b7153b7
+      internalID: -419875872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bandera-victoria_4
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 60
+        height: 90
+      alignment: 9
+      pivot: {x: 0.145079, y: 0.02677206}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93971eaa59217934abbe1f5c88ee071b
+      internalID: -569029494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bandera-victoria_5
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 60
+        height: 90
+      alignment: 9
+      pivot: {x: 0.145079, y: 0.02677206}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a752baf82961eef44add50953fa12086
+      internalID: 1059913543
       vertices: []
       indices: 
       edges: []
@@ -191,7 +233,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -199,10 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      coin-animation_0: 8980438598086963491
-      coin-animation_1: 3344596444136561788
-      coin-animation_2: 1158639269171017508
-      coin-animation_3: -6541766136644436370
+      bandera-victoria_0: 2058969819
+      bandera-victoria_1: -1231599696
+      bandera-victoria_2: 664805597
+      bandera-victoria_3: -419875872
+      bandera-victoria_4: -569029494
+      bandera-victoria_5: 1059913543
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
