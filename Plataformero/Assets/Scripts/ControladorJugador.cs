@@ -80,13 +80,14 @@ public class ControladorJugador : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && !miPersonaje.aturdido)
         {
+            misSonidos.reproducir("ATACANDO");
             miAnimador.SetTrigger("ATACANDO");
         }
         miAnimador.SetFloat("vel_vert", velActualVert);
 
         if (miPersonaje.hp <= 0)
         {
-            Invoke("morirPersonaje", 1.0f);
+            Invoke("morirPersonaje", 5.0f);
         }
         else if (miPersonaje.hp <= 0 && Personaje.vidas < 0)
         {

@@ -59,7 +59,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: bf83025c0e95aea488762384a163fc3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -179,10 +179,10 @@ MonoBehaviour:
   hp: 60
   hpMax: 100
   score: 0
-  vidas: 1
   efectoSangrePrefab: {fileID: 4553287630450876385, guid: 15483e51212e3d74886ea57291f4639a, type: 3}
   aturdido: 0
   muerto: 0
+  efectoBurbujasPrefab: {fileID: 0}
 --- !u!82 &4790974427944352559
 AudioSource:
   m_ObjectHideFlags: 0

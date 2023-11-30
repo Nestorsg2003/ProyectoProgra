@@ -285,6 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puntosVida: 1
   efectoAguaPrefab: {fileID: 8205706795460263314, guid: 326e86d5729c54e479798cacab220bb2, type: 3}
+  puntosDanio: 100
 --- !u!483693784 &22789257
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -8257,7 +8258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 072e4ed25b2476143acbeaefd6f43147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroe: {fileID: 0}
+  heroe: {fileID: 763302709}
   etiquetaHPHeroe: {fileID: 1467154083}
   barraHPHeroe: {fileID: 333591874}
   etiquetaScore: {fileID: 70786435}
@@ -15132,6 +15133,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2ca5f097757676408698457cbc05df1, type: 3}
+--- !u!114 &763302709 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5757604227090448824, guid: c2ca5f097757676408698457cbc05df1, type: 3}
+  m_PrefabInstance: {fileID: 763302708}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d55eb47b684e545bd4cd04ba0fba14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &839826533
 GameObject:
   m_ObjectHideFlags: 0
